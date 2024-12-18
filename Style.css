@@ -1,0 +1,270 @@
+/* stylesheet*/
+
+:root{
+    --maxDimension: 800px;
+    --maxHeight: 900px;
+    --boxUnitSize: calc(var(var(--maxDimension)))
+    --box1: var(--boxUnitSize);
+    --box2: calc(var(--boxUnitSize) * 2);
+    --box3: calc(var(--boxUnitSize) * 4);
+}
+
+.{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: url("https://wallpaperaccess.com/full/3239444.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    color:#ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+.parent-col{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left-col {
+    flex-basis: 4%;
+    perspective: 1000px;
+    width: 4%;
+    position: sticky;
+    top: 0%;
+    height: 100vh;
+}
+.middle-col {
+    flex-basis: 36%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 700em;
+    height: 100vh; 
+    width: 100%; 
+    perspective: 1000px; 
+    flex-grow: 1;
+    overflow: hidden;
+    animation: fall 1s ease-in-out forwards;
+}
+
+.right-col {
+    flex-basis: 50%;
+    overflow-y: auto;
+    top: 0%;
+    position: sticky;
+    height: 100vh;
+    padding-left: 10px;
+}
+
+.sidebar{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    font-size: 2rem;
+}
+
+.web-logo, .web-logo-1, .web-logo-2, .web-logo-3, .web-logo-4{
+    transform-style: preserve-3d;
+    transition: 0.5s ease;
+}
+
+.web-logo, .web-logo-1, .web-logo-2, .web-logo-3, .web-logo-4{
+    transform: scale(0.7);
+}
+
+.web-logo{
+    height: 40px;             
+    width: 40px;             
+    display: block;           
+    margin: 20px;                
+}
+
+.web-logo-1{
+    height: 30px;             
+    width: 30px;             
+    display: block;           
+    margin: 20px;
+}
+
+.web-logo-2{
+    height: 30px;             
+    width: 30px;             
+    display: block;           
+    margin: 20px;
+}
+
+.web-logo-3{    
+    height: 30px;             
+    width: 30px;             
+    display: block;           
+    margin: 20px;
+}
+
+.web-logo-4{
+    height: 43px;             
+    width: 43px;             
+    display: block;           
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    transform-style: preserve-3d; 
+    transition: transform 0.5s ease; 
+    transition: opacity 1s ease;
+}
+
+img:hover {
+    transform:  scale(1.1); 
+}
+
+
+.name-overlay {
+    position: absolute; 
+    left: 50%; 
+    bottom: 8%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 2rem; 
+    font-weight: bold; 
+    font-family: 'Oswald', sans-serif; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    z-index: 1; 
+    white-space: nowrap; 
+}
+
+ .aboutme{
+    display: flex;
+    font-size: 40px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px solid white;
+}
+
+.freelance{
+    font-size: 25px;
+}
+
+.skills{
+    display: flex;
+    width: 35em;
+    line-height: 160%;
+    border-bottom: 3px solid #7f00ff;
+}
+
+.h2-ser{
+    font-size: 2.5rem;
+}
+
+.service{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.servicess {
+    display: grid;
+    font-size: 10px;
+    flex-basis: 48%;
+}
+
+.servicess h3{
+    font-size: 20px;
+    width: 8em;
+}
+
+.servicess p{
+    width: 20em;
+    font-size: 15px;
+}
+
+ .fun-facts {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 70px;
+}
+
+.box {
+    background: #2c2c2c;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #7f00ff;
+}
+
+.icon-0 {
+    margin-bottom: 1rem;
+    color: #3498db; 
+}
+
+.icon-0 img{
+    height: 70px;
+    width: 120px;
+    justify-content: center;
+}
+
+.icon-1 {
+    margin-bottom: 1rem;
+    color: #3498db; 
+}
+
+.icon-1 img{
+    height: 90px;
+    width: 120px;
+    justify-content: center;
+}
+
+.pricing {
+    margin-top: 4rem;
+    border-top:3px solid #7f00ff;
+    font-size: 1.5rem;
+}
+
+.pricing-box {
+    display: inline-block;
+    background: #2c2c2c;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 220px;
+}
+
+.price {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+button {
+    background: transparent;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+    background: #3498db;
+    color: #fff;

@@ -1,0 +1,155 @@
+/* Stylesheet */
+
+:root{
+    --maxDimension: 800px;
+    --maxHeight: 900px;
+    --boxUnitSize: calc(var(var(--maxDimension)))
+    --box1: var(--boxUnitSize);
+    --box2: calc(var(--boxUnitSize) * 2);
+    --box3: calc(var(--boxUnitSize) * 4);
+}
+
+.{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #050505b9;
+    color: white;
+    line-height: 2.5;
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    background: linear-gradient(rgb(20, 20, 20), #1c6c35);
+    padding-top: 1em ;
+    padding-bottom: 16em;
+    flex-basis: 20%;
+    flex-wrap: ;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgba(49, 163, 52, 0.525);
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    border-radius: 8px;
+    background-image: url("https://wallpaperaccess.com/full/4135445.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 75%;
+    flex-wrap: wrap;
+}
+
+.HTML-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.HTML-tag {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+}
+
+.HTML-tag:hover {
+    transform: translateY(-30px);
+}
+
+.HTML-tag h2 {
+    margin-top: 3px;
+    font-size: 1.5rem;
+    color: #00796b;
+}
+
+.HTML-tag p {
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
+
+pre {
+    background: black;
+    color: white;
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotateX(90deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    width: 100%;
+    z-index: 1;
+    visibility: visible;
+}
+
+.HTML-tag:hover pre {
+    transform: translateX(-50%) rotateX(0);
+    opacity: 1;
+}
+
+footer {
+    background: #4caf50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    flex-basis: 5%;
+    flex-wrap: wrap;
+}
+
+
+.naruto-image {
+    height: 100%; 
+    width: auto; 
+    display: block; 
+}
+.naruto-gif {
+    position: absolute;
+    left: 00px;
+    top: 6em;
+    bottom:0px;
+    animation: moveRight 10s linear infinite;
+}
+
+.naruto-text {
+    position: absolute;
+    font-size: 16px;
+    color: rgba(rgba(255, 255, 255, 0.646));
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    top: 14%; 
+    left: 20%; 
+    transform: translate(-50%, -50%); 
+}
+
+@keyframes moveRight {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 100%;
+    }
+}
